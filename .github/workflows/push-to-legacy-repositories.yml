@@ -5,16 +5,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Push all branches to github.com/nvlabs/cub
-      uses: wei/git-sync@v2
+      uses: brycelelbach/github_action_sync@main
       #if: github.repository == 'nvidia-migration-test/cub'
       with:
         source_repo: "nvidia-migration-test/cub"
-        source_branch: "refs/remotes/origin/*"
+        source_branch: "refs/remotes/source/*"
         destination_repo: "nvlabs-migration-test/cub"
         destination_branch: "refs/head/*"
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Push all tags to github.com/nvlabs/cub
-      uses: wei/git-sync@v2
+      uses: brycelelbach/github_action_sync@main
       #if: github.repository == 'nvidia-migration-test/cub'
       with:
         source_repo: "nvidia-migration-test/cub"
@@ -23,16 +23,16 @@ jobs:
         destination_branch: "refs/tags/*"
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Push all branches to github.com/thrust/cub
-      uses: wei/git-sync@v2
+      uses: brycelelbach/github_action_sync@main
       #if: github.repository == 'nvidia-migration-test/cub'
       with:
         source_repo: "nvidia-migration-test/cub"
-        source_branch: "refs/remotes/origin/*"
+        source_branch: "refs/remotes/source/*"
         destination_repo: "thrust-migration-test/cub"
         destination_branch: "refs/head/*"
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Push all tags to github.com/thrust/cub
-      uses: wei/git-sync@v2
+      uses: brycelelbach/github_action_sync@main
       #if: github.repository == 'nvidia-migration-test/cub'
       with:
         source_repo: "nvidia-migration-test/cub"
