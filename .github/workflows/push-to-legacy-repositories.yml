@@ -6,7 +6,7 @@ jobs:
     steps:
     - name: Push all branches to github.com/nvlabs/cub
       uses: wei/git-sync@v2
-      if: github.repository == 'nvidia-migration-test/cub'
+      #if: github.repository == 'nvidia-migration-test/cub'
       with:
         source_repo: "nvidia-migration-test/cub"
         source_branch: "refs/remotes/source/*"
@@ -15,7 +15,7 @@ jobs:
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Push all tags to github.com/nvlabs/cub
       uses: wei/git-sync@v2
-      if: github.repository == 'nvidia-migration-test/cub'
+      #if: github.repository == 'nvidia-migration-test/cub'
       with:
         source_repo: "nvidia-migration-test/cub"
         source_branch: "refs/tags/*"
@@ -24,7 +24,7 @@ jobs:
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Push all branches to github.com/thrust/cub
       uses: wei/git-sync@v2
-      if: github.repository == 'nvidia-migration-test/cub'
+      #if: github.repository == 'nvidia-migration-test/cub'
       with:
         source_repo: "nvidia-migration-test/cub"
         source_branch: "refs/remotes/source/*"
@@ -33,7 +33,7 @@ jobs:
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Push all tags to github.com/thrust/cub
       uses: wei/git-sync@v2
-      if: github.repository == 'nvidia-migration-test/cub'
+      #if: github.repository == 'nvidia-migration-test/cub'
       with:
         source_repo: "nvidia-migration-test/cub"
         source_branch: "refs/tags/*"
