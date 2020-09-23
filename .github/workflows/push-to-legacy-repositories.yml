@@ -9,7 +9,7 @@ jobs:
       #if: github.repository == 'nvidia-migration-test/cub'
       with:
         source_repo: "nvidia-migration-test/cub"
-        source_branch: "refs/remotes/source/*"
+        source_branch: "refs/remotes/origin/*"
         destination_repo: "nvlabs-migration-test/cub"
         destination_branch: "refs/head/*"
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -27,7 +27,7 @@ jobs:
       #if: github.repository == 'nvidia-migration-test/cub'
       with:
         source_repo: "nvidia-migration-test/cub"
-        source_branch: "refs/remotes/source/*"
+        source_branch: "refs/remotes/origin/*"
         destination_repo: "thrust-migration-test/cub"
         destination_branch: "refs/head/*"
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
